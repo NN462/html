@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>齐星贻的个人主页</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: #f4fbff;
+            color: #333;
+            font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+            line-height: 1.8;
+        }
+        .welcome {
+            overflow: hidden;
+            background: #fff1a6;
+            color: #c40000;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            white-space: nowrap;
+            padding: 12px 0;
+        }
+        .welcome span {
+            display: inline-block;
+            animation: move 12s linear infinite;
+        }
+        @keyframes move {
+            from { transform: translateX(100vw); }
+            to { transform: translateX(-100%); }
+        }
+        header {
+            background: #fff;
+            text-align: center;
+            padding: 26px 15px 18px;
+            border-bottom: 1px solid #d9e8ed;
+        }
+        header h1 {
+            margin: 0 0 18px;
+            color: #386c91;
+            font-size: 30px;
+            letter-spacing: 8px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+        }
+        nav a {
+            color: #3978a8;
+            text-decoration: underline;
+            padding: 5px 8px;
+        }
+        main { background: #fff; }
+        section {
+            padding: 18px 8px 22px;
+            border-bottom: 1px solid #cbdfe7;
+        }
+        section h2 {
+            margin: 0 0 10px;
+            color: #315f8d;
+            font-size: 17px;
+        }
+        .intro-text { margin: 0 0 12px 8px; }
+        .photo-box {
+            width: 220px;
+            margin: 10px auto 6px;
+            text-align: center;
+        }
+        .photo-box img {
+            display: block;
+            width: 220px;
+            height: 290px;
+            object-fit: cover;
+            border: 3px solid #315f8d;
+            background: #fff;
+        }
+        .photo-name { color: #777; font-size: 13px; margin: 4px 0 0; }
+        .photo-tip { color: #777; font-size: 12px; text-align: center; }
+        .red-text { color: red; font-size: 22px; }
+        .small-text { font-size: 12px; color: #777; }
+        .big-text { font-size: 20px; color: #3978a8; }
+        .yellow-line {
+            color: #8a6500;
+            background: #fff6b4;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        .media-row { max-width: 620px; margin: 10px auto; text-align: center; }
+        audio { width: 100%; }
+        table {
+            width: calc(100% - 16px);
+            margin: 10px 8px;
+            border-collapse: collapse;
+            background: #fff;
+        }
+        th, td {
+            border: 1px solid #7aa7c2;
+            padding: 10px 6px;
+            text-align: center;
+        }
+        th { background: #edf7ff; }
+        .form-box {
+            width: min(420px, calc(100% - 32px));
+            margin: 8px auto;
+        }
+        label { display: block; margin: 8px 0; }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #8faabd;
+        }
+        input[type="submit"] {
+            color: #fff;
+            background: #3978a8;
+            border: 0;
+            cursor: pointer;
+        }
+        .course-link { color: #3978a8; }
+        footer {
+            text-align: center;
+            color: #777;
+            padding: 16px;
+            background: #fff;
+        }
+        @media (max-width: 600px) {
+            .welcome { font-size: 20px; }
+            header h1 { font-size: 24px; letter-spacing: 4px; }
+            nav { gap: 4px 8px; }
+            .photo-box, .photo-box img { width: 180px; }
+            .photo-box img { height: 240px; }
+            table { font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome"><span>★ 欢迎访问我的个人主页 ★ 通信工程 · 大三</span></div>
+
+    <header>
+        <h1>我的个人主页</h1>
+        <nav>
+            <a href="#intro">个人简介</a>
+            <a href="#course">课程表</a>
+            <a href="#media">多媒体</a>
+            <a href="#table">表格与表单</a>
+            <a href="子页面.html">第二个网页</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>版块一——个人简介</h2>
+            <p class="intro-text">
+                我叫<b>齐星贻</b>，来自<i>黑龙江佳木斯</i>，现在在<u>西安石油大学</u>学习通信工程，
+                预计2028年6月毕业。<span class="red-text">很开心认识你！</span>
+            </p>
+            <p class="intro-text"><span class="small-text">每天学习一点点</span>，<span class="big-text">一步步向前走。</span></p>
+            <div class="photo-box">
+                <img src="8720.jpg_wh860.jpg" alt="齐星贻的照片">
+                <p class="photo-name">我的照片</p>
+            </div>
+            <p class="photo-tip">把自己的照片放在与网页同一个文件夹中，就可以在这里看到。</p>
+        </section>
+
+        <section id="course">
+            <h2>版块二——课程表</h2>
+            <p style="text-align:center;margin:0;">通信工程大三课程表</p>
+            <table>
+                <tr>
+                    <th>星期</th><th>第一节</th><th>第二节</th><th>实验 / 自习</th>
+                </tr>
+                <tr>
+                    <td>周一</td><td>通信原理</td><td>信号与线性系统</td><td>整理笔记</td>
+                </tr>
+                <tr>
+                    <td>周二</td><td>高频电子线路</td><td>通信原理</td><td>做作业</td>
+                </tr>
+                <tr>
+                    <td>周三</td><td>数字信号处理</td><td>英语</td><td>实验课</td>
+                </tr>
+                <tr>
+                    <td>周四</td><td>网页设计</td><td>通信原理</td><td>复习</td>
+                </tr>
+                <tr>
+                    <td>周五</td><td>体育</td><td>自习</td><td>整理学习资料</td>
+                </tr>
+            </table>
+            <p style="text-align:center;margin:12px 0 0;">
+                <a class="course-link" href="子页面.html">打开独立课程表网页</a>
+            </p>
+        </section>
+
+        <section id="decoration">
+            <h2>版块三——网页修饰</h2>
+            <p>字体标记演示：<b>粗体</b>、<i>斜体</i>、<u>下划线</u>、<span class="red-text">红色字</span>。</p>
+            <div class="yellow-line">这是黄色背景的一行滚动文字，欢迎来到我的主页！</div>
+        </section>
+
+        <section id="media">
+            <h2>版块四——多媒体和网页链接</h2>
+            <div class="media-row">
+                <p>背景音乐：</p>
+                <audio src="M500002PRKPk3CZ6pc.mp3" controls loop>
+                    您的浏览器不支持音频播放。
+                </audio>
+            </div>
+        </section>
+
+        <section id="table">
+            <h2>版块五——表格与表单</h2>
+            <table>
+                <tr><th>姓名</th><th>科目</th></tr>
+                <tr><td>齐星贻</td><td>网页设计</td></tr>
+            </table>
+            <form class="form-box">
+                <label>用户名：<input type="text" name="username"></label>
+                <label>密码：<input type="password" name="pwd"></label>
+                <input type="submit" value="提交">
+            </form>
+        </section>
+    </main>
+
+    <footer>希望你喜欢我的个人主页！</footer>
+</body>
+</html>
